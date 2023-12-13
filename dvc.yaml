@@ -1,9 +1,18 @@
 stages:
   make_dataset:
-    cmd: python ./src/data/make_dataset.py ./data/raw/creditcard.csv
+    cmd: python .\src\data\make_dataset.py .\data\raw\creditcard.csv
     deps:
-    - ./data/raw/creditcard.csv
-    - ./src/data/make_dataset.py
+    - .\data\raw\creditcard.csv
+    - .\src\data\make_dataset.py
     params:
     - make_dataset.test_split
     - make_dataset.seed
+  train_model:
+    cmd: python .\src\models\train_model.py .\data\processed\
+    deps:
+    - .\data\processed\
+    - .\src\models\train_model.py
+    params:
+    - train_model.seed
+    - train_model.n_estimators
+    - train_model.max_depth

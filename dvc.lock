@@ -1,13 +1,13 @@
 schema: '2.0'
 stages:
   make_dataset:
-    cmd: python ./src/data/make_dataset.py ./data/raw/creditcard.csv
+    cmd: python .\src\data\make_dataset.py .\data\raw\creditcard.csv
     deps:
-    - path: ./data/raw/creditcard.csv
+    - path: .\data\raw\creditcard.csv
       hash: md5
       md5: e90efcb83d69faf99fcab8b0255024de
       size: 150828752
-    - path: ./src/data/make_dataset.py
+    - path: .\src\data\make_dataset.py
       hash: md5
       md5: 5d87ea0853101b748b17af0be510c2ac
       size: 1314
@@ -15,3 +15,20 @@ stages:
       params.yaml:
         make_dataset.seed: 2023
         make_dataset.test_split: 0.2
+  train_model:
+    cmd: python .\src\models\train_model.py .\data\processed\
+    deps:
+    - path: .\data\processed\
+      hash: md5
+      md5: 85238d684fd82ab50273b754697025d9.dir
+      size: 151102527
+      nfiles: 3
+    - path: .\src\models\train_model.py
+      hash: md5
+      md5: c9cc035cc5e3fa4724c378d315465a6d
+      size: 1360
+    params:
+      params.yaml:
+        train_model.max_depth: 6
+        train_model.n_estimators: 10
+        train_model.seed: 2023

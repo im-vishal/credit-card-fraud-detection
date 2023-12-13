@@ -32,3 +32,19 @@ stages:
         train_model.max_depth: 6
         train_model.n_estimators: 10
         train_model.seed: 2023
+  visualize:
+    cmd: python .\src\visualization\visualize.py .\models\model.joblib .\data\processed\
+    deps:
+    - path: .\data\processed\
+      hash: md5
+      md5: 85238d684fd82ab50273b754697025d9.dir
+      size: 151102527
+      nfiles: 3
+    - path: .\models\model.joblib
+      hash: md5
+      md5: 3faba1b19847d9665321a20364960d9e
+      size: 53497
+    - path: .\src\visualization\visualize.py
+      hash: md5
+      md5: a9bb2929deb946cbcf48b83bd938d0de
+      size: 3685

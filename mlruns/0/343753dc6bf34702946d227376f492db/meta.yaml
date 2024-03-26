@@ -1,0 +1,15 @@
+artifact_uri: file:///mnt/c/Users/vishpand/OneDrive%20-%20Nokia/1%29%20Nokia%20Projects/Other%20Teams%20Projects/10%29%20Personal%20Projects/3%29%20campusx%20DS%20course/5%29%20DSMP%202.0/ML%20Ops/credit-card-fraud-detection/mlruns/0/343753dc6bf34702946d227376f492db/artifacts
+end_time: 1711451796930
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 343753dc6bf34702946d227376f492db
+run_name: charming-duck-654
+run_uuid: 343753dc6bf34702946d227376f492db
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1711451794568
+status: 3
+tags: []
+user_id: virtualvishal

@@ -27,7 +27,7 @@ def main():
     home_dir = curr_dir.parent.parent.parent
     # params_file = home_dir.as_posix() + '/params.yaml'
     params_file = home_dir.joinpath(sys.argv[2])
-    params = yaml.safe_load(open(params_file))["make_dataset"]
+    params = yaml.safe_load(open(params_file, encoding='utf-8'))["make_dataset"]
 
     input_file = sys.argv[1]
     data_path = home_dir.joinpath(input_file)

@@ -23,7 +23,7 @@ def main():
     curr_dir = pathlib.Path(__file__)
     home_dir = curr_dir.parent.parent.parent
     params_file = home_dir.joinpath(sys.argv[2])
-    params = yaml.safe_load(open(params_file))["train_model"]
+    params = yaml.safe_load(open(params_file, encoding='utf-8'))["train_model"]
 
     input_file = sys.argv[1]
     data_path = home_dir.joinpath(input_file)

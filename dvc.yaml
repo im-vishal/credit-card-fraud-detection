@@ -10,3 +10,11 @@ stages:
     - make_dataset.seed
     # outs:
     # - ./data/processed/
+  train_model:
+    cmd: python ./src/models/train_model.py ./data/processed/ ./params.yaml
+    deps:
+    - ./data/processed/
+    - ./src/models/train_model.py
+    - ./params.yaml
+    # outs:
+    # - ./models/

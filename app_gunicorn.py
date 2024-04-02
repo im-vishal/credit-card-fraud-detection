@@ -1,6 +1,6 @@
 # main.py
 from fastapi import FastAPI
-from joblib import load
+from joblib import load # type: ignore
 from pydantic import BaseModel
 
 app = FastAPI()
